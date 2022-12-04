@@ -28,9 +28,9 @@ To Do Listを作成するアプリです。コンピュータサイエンス学�
 	* Local Storageのデータの削除
 * [<input>: 入力欄（フォーム入力）要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/input)
 	* inputタグ
-* [<textarea>](https://html-coding.co.jp/annex/dictionary/html/textarea/)
+* [textarea](https://html-coding.co.jp/annex/dictionary/html/textarea/)
 	* textareaタグ
-* [<label>](https://html-coding.co.jp/annex/dictionary/html/label/)
+* [label](https://html-coding.co.jp/annex/dictionary/html/label/)
 	* labelタグ
 * [Cards](https://getbootstrap.jp/docs/4.2/components/card/)
 	* cardクラス（Bootstrap）
