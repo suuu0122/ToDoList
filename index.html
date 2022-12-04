@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<title>ToDoList</title>
+</head>
+<body>
+	<div id="app">
+		<div v-if="initialPage" key="initialPage">
+			<div class="vh-100 d-flex flex-column align-items-center">
+				<h2 class="mt-5">ToDoList</h2>
+				<input type="name" class="my-3" placeholder="Your Name"v-model="userName">
+				<div class="d-flex justify-content-between p-3">
+					<button class="btn btn-primary m-2" v-on:click="new_taskList">New</button>
+					<button class="btn btn-primary m-2" v-on:click="login_taskList">Login</button>
+				</div>
+			</div>
+		</div>
+		<div v-if="createTaskPage" key="createTaskPage" class="d-flex flex-column align-items-center m-5">
+			<label>write your task name</label>
+			<input type="text" class="m-2 w-50" v-model="taskName">
+			<label class="mt-5">write your task contents</label>
+			<textarea class="m-2 w-50" v-model="taskContents"></textarea>
+			<div class="m-5">
+				<button class="btn btn-success m-2" v-on:click="create_task">create</button>
+				<button class="btn btn-success m-2" v-on:click="move_checkTasksPage">check your tasks</button>
+			</div>
+		</div>
+		<div v-if="checkTasksPage" key="checkTasksPage">
+			<div class="text-center">
+				<button class="btn btn-success mt-4 mx-4" v-on:click="move_createTasksPage">create your tasks</button>
+				<button class="btn btn-success mt-4 mx-4" v-on:click="save_data">save your data</button>
+				<button class="btn btn-success mt-4 mx-4" v-on:click="delete_data">delete your data</button>
+			</div>
+			<div v-for="(contents, name) in taskList" class="d-flex flex-column align-items-center m-5">
+				<div class="card w-50 my-2">
+					<div class="card-body">
+						<h5 class="card-title">{{ name }}</h5>
+						<p class="card-text">{{ contents }}</p>
+						<button class="btn btn-success mt-2" v-on:click="delete_task(name)">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
