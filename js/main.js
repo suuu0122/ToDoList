@@ -13,9 +13,15 @@ app = Vue.createApp({
 
 	methods: {
 		create_task() {
-			this.taskList[this.taskName] = this.taskContents;
-			this.taskName = "";
-			this.taskContents = "";
+			if (this.taskName === "") {
+				alert("Write your task name");
+			} else if (this.taskContents === "") {
+				alert("Write your task contents");
+			} else {
+				this.taskList[this.taskName] = this.taskContents;
+				this.taskName = "";
+				this.taskContents = "";
+			}
 		},
 
 		move_initialPage() {
@@ -31,9 +37,13 @@ app = Vue.createApp({
 		},
 
 		move_checkTasksPage() {
-			this.initialPage = false;
-			this.createTaskPage = false;
-			this.checkTasksPage = true;
+			if (Object.keys(this.taskList).length === 0) {
+				alert("No your tasks")
+			} else {
+				this.initialPage = false;
+				this.createTaskPage = false;
+				this.checkTasksPage = true;
+			}
 		},
 
 		delete_task(key) {
