@@ -26,7 +26,7 @@ To Do Listを作成するアプリです。コンピュータサイエンス学�
 * [【Vue.js】Local Storageでデータを永続化させる](https://qiita.com/higa02/items/e12c3a16db014a9414c1)
 	* Local Storageへのデータの保存
 	* Local Storageのデータの削除
-* [<input>: 入力欄（フォーム入力）要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/input)
+* [input: 入力欄（フォーム入力）要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/input)
 	* inputタグ
 * [textarea](https://html-coding.co.jp/annex/dictionary/html/textarea/)
 	* textareaタグ
